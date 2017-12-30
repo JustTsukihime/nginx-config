@@ -10,3 +10,15 @@ error_page   500 502 503 504  /50x.html;
 location / {
     try_files $uri $uri/ /index.php?$query_string;
 }
+
+location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
+    access_log		off;
+    log_not_found	off;
+    expires		30d;
+}
+
+location ~ /\. {
+    access_log		off;
+    log_not_found	off;
+    deny		all;
+}

@@ -1,0 +1,2 @@
+include        php7.2-fcgi_params;
+

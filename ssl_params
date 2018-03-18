@@ -8,7 +8,7 @@ ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA
 ssl_prefer_server_ciphers on;
 
 # In case of error here, generate dhparams:
-# openssl dhparam 4096 -out /etc/ssl/dhparam.pem
+# openssl dhparam -dsaparam -out /etc/ssl/private/dhparam.pem 4096
 ssl_dhparam /etc/ssl/private/dhparams.pem;
 
 add_header Strict-Transport-Security "max-age=31536000";

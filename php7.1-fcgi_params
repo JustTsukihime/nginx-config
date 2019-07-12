@@ -1,4 +1,0 @@
-location ~ \.php$ {
-    include        php-fcgi_params;
-    fastcgi_pass   unix:/var/run/php/php7.1-fpm.sock;
-}

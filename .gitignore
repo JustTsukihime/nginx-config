@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!default_params
+!php*
+!ssl_params
+!conf.d/default
+!conf.d/example*

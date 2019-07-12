@@ -2,7 +2,12 @@ charset utf-8;
 
 index  index.php index.html index.htm;
 
-error_page   404              /404.html;
+add_header X-Frame-Options "SAMEORIGIN";
+add_header X-XSS-Protection "1; mode=block";
+add_header X-Content-Type-Options "nosniff";
+
+error_page   404              /index.php; # Framework errors
+#error_page   404              /404.html;
 error_page   500 502 503 504  /50x.html;
 
 location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
@@ -16,3 +21,6 @@ location ~ /\. {
     log_not_found	off;
     deny		all;
 }
+
+location = /favicon.ico { access_log off; log_not_found off; }
+location = /robots.txt  { access_log off; log_not_found off; }

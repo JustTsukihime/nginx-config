@@ -1,2 +1,2 @@
-include        php7.3-fcgi_params;
+include        php7.4-fcgi_params;
 
